@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import RadioGroupRating from "./RadioGroupRating";
+import VotingPanel from "./modules/VotingPanel";
 function App() {
   return (
     <div className="App">
-      <RadioGroupRating/>
+      <VotingPanel/>
     </div>
   );
 }
