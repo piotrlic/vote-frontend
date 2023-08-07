@@ -38,8 +38,10 @@
 .vote_item_disabled {
     background-image: url("../assets/star-grey.png");
 }
+
 .confirm_btn,
-.btn_clicked {
+.btn_clicked,
+.confirm_btn_disabled{
     width: 298px;
     height: 368px;
     background-image: url("../assets/confirm.png");
@@ -58,7 +60,9 @@
     transform: translate3d(0, 0, 0);
     perspective: 1000px;
 }
-
+.confirm_btn_disabled {
+    filter: opacity(40%);
+}
 @keyframes shake {
     10%, 90% {
         transform: translate3d(-1px, 0, 0);

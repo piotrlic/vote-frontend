@@ -5,17 +5,18 @@ import firebase from "firebase/compat";
 import Timestamp = firebase.firestore.Timestamp;
 const Stars = ()=> {
   const [vote, setVote] = useState<number>(0)
-  const [clicked, setClicked] = useState(false)
+  const [tickClicked, setTickClicked] = useState(false)
+  const stars_selected = vote > 0
   const updateVote = (e) => {
     setVote(e.target.id)
   }
   useEffect(()=>{
-    if(clicked){
+    if(tickClicked){
 
-      setClicked(false)
-      document.getElementById('confirm_btn').className = 'confirm_btn';
+      setTickClicked(false)
+      document.getElementById('confirm_btn').className = 'confirm_btn_disabled';
     }
-  }, [clicked])
+  }, [tickClicked])
   const sendVote = async () => {
     await addDoc(collection(db, "votes"), {
       vote: vote,
@@ -23,7 +24,7 @@ const Stars = ()=> {
     });
 
     document.getElementById('confirm_btn').className = 'btn_clicked';
-    setClicked(true)
+    setTickClicked(true)
     setVote(0)
   }
   return (
@@ -35,7 +36,7 @@ const Stars = ()=> {
             <div id={`${i+1}`} className="vote_item_disabled" onClick={updateVote}/>
         )}
       </div>
-      <button id="confirm_btn" className="confirm_btn" onClick={sendVote}/>
+      <button id="confirm_btn" className={stars_selected ? "confirm_btn": "confirm_btn_disabled"} onClick={stars_selected ? sendVote : undefined}/>
     </>
   )
 }
