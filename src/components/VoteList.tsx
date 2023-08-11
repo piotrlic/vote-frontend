@@ -1,10 +1,8 @@
 
-import { collection, query, where, and, getCountFromServer } from "firebase/firestore";
-import db from "./firebase";
-import {useCallback, useEffect, useState} from "preact/compat";
-import DailyStatistics from "./DailyStatistics";
-import firebase from "firebase/compat";
-import Timestamp = firebase.firestore.Timestamp;
+import { collection, query, where, and, getCountFromServer } from "firebase/firestore"
+import db from "./firebase"
+import {useCallback, useEffect, useState} from "preact/compat"
+import DailyStatistics from "./DailyStatistics"
 
 export interface VoteStats {
   vote: number
@@ -15,11 +13,13 @@ const VoteList = ({...params}) => {
 
   const countTodayVotes = async (value: number) => {
     const votesRef = collection(db, "votes")
+    const today = new Date()
+    today.setHours(0)
+    today.setMinutes(0)
+    today.setSeconds(0)
     const queryRef = query(votesRef,
-      //and(
         where("vote", "==", ""+value),
-        //where("creationDate", "==", today)
-      //)
+        where("creationDate", '>', today)
     )
     const querySnapshot = await getCountFromServer(queryRef)
     return querySnapshot.data()
@@ -45,7 +45,7 @@ const VoteList = ({...params}) => {
 
   return (
     <>
-      <div>This is list</div>
+      <h1>Dzisiejsze głosy ({new Date().getUTCDate() +"-"+ new Date().getUTCMonth() +"-"+ new Date().getUTCFullYear()})</h1>
       {voteStatistics && voteStatistics.size>0 && <DailyStatistics voteStatistics={voteStatistics}/>}
     </>
   )
