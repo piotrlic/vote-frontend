@@ -1,0 +1,21 @@
+{
+  "bundle.css": "bundle.c9faf.css",
+  "bundle.js": "bundle.61613.esm.js",
+  "bundle.js.map": "bundle.61613.esm.js.map",
+  "polyfills.js": "polyfills.d452f.esm.js",
+  "polyfills.js.map": "polyfills.d452f.esm.js.map",
+  "background.png": "28c7f0646aa6c87a9739562546bbab0a.png",
+  "star.png": "66bbb3dd437d56dcc612bd272cd4d92d.png",
+  "star-grey.png": "7756503ea146b6adf0585966d310351a.png",
+  "confirm.png": "8e9a67a142580e558d12cac03676faca.png",
+  "assets/background.png": "assets/background.png",
+  "assets/confirm.png": "assets/confirm.png",
+  "assets/favicon.ico": "assets/favicon.ico",
+  "assets/star-grey.png": "assets/star-grey.png",
+  "assets/star.png": "assets/star.png",
+  "manifest.json": "manifest.json",
+  "sw-esm.js": "sw-esm.js",
+  "sw-esm.js.map": "sw-esm.js.map",
+  "sw.js": "sw.js",
+  "sw.js.map": "sw.js.map"
+}
