@@ -1,7 +1,7 @@
 {
   "name": "Food Track",
   "short_name": "Food Track",
-  "start_url": "/",
+  "start_url": "/vote-frontend/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
