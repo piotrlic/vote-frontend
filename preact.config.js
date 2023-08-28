@@ -10,6 +10,6 @@
  * @param {import('preact-cli').Helpers} helpers - object with useful helpers for working with the webpack config
  * @param {Record<string, unknown>} options - this is mainly relevant for plugins (will always be empty in the config), default to an empty object
  */
-export default (config, env, helpers, options) => {
+export default (config) => {
     config.output.publicPath = ""
 }

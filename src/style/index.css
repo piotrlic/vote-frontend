@@ -28,7 +28,7 @@
     color: #901;
     text-align: center;
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    font-family: myfont;
+    font-family: myfont, serif;
     font-size: 120px;
     font-style: normal;
     font-weight: 400;
@@ -52,8 +52,6 @@
     width: 107px;
     display: inline-block;
     background-image: url("../assets/star.png");
-    background-height: 101px;
-    background-width: 107px;
 }
 
 .vote_item_disabled {
