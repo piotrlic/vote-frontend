@@ -3,15 +3,32 @@
     margin: 0;
 }
 #app{
-    background-image: url("../assets/background.png");
-    height: 1194px;
 
+}
+
+.app_panel{
+    background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    height: 1194px;
+    width: 834px;
+    margin: auto;
+}
+.vote_panel{
+    margin: 0 120px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    vertical-align: center;
+}
+@font-face {
+    font-family: myfont;
+    src: url(NatureBeautyPersonalUse-9Y2DK.ttf);
 }
 .title {
     color: #901;
     text-align: center;
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    font-family: Darumadrop One;
+    font-family: myfont;
     font-size: 120px;
     font-style: normal;
     font-weight: 400;
@@ -19,11 +36,15 @@
     padding-top: 200px;
 
 }
-.vote_panel{
-    margin: 0 120px;
-    display: flex;
-    flex-flow: row wrap;
+.stars {
+    border: 1px solid black;
+}
 
+@media (min-width: 1000px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+    .stars {
+        flex-flow: nowrap;
+    }
 }
 .vote_item_enabled,
 .vote_item_disabled {

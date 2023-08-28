@@ -1,12 +1,15 @@
 import VotePanel from "./VotePanel"
-import Router from 'preact-router';
-import VoteList from "./VoteList";
-const App = () => (
+import VoteList from "./VoteList"
 
-	<Router>
-		<VotePanel path="/"/>
-		<VoteList path="/votes"/>
-	</Router>
-);
+const App = () => {
+	const queryParameters = new URLSearchParams(window.location.search)
+	const showList = queryParameters.get("showList")
+	console.log(showList)
+	return (
+		<>
+			{ showList ? <VoteList /> : <VotePanel path={``} /> }
+		</>
+	);
+}
 
 export default App;

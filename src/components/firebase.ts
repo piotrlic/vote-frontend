@@ -9,7 +9,8 @@ const firebaseConfig = {
   projectId: "foodtrack-5b0cc",
   storageBucket: "foodtrack-5b0cc.appspot.com",
   messagingSenderId: "894812303321",
-  appId: "1:894812303321:web:1cdb32f1e03fbff682f3c8"
+  appId: "1:894812303321:web:1cdb32f1e03fbff682f3c8",
+  measurementId: "G-C0ZPGQRBV3"
 };
 
 // Initialize Firebase
